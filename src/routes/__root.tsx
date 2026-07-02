@@ -83,13 +83,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "TruHub Solutions is a premium digital agency crafting cinematic websites and digital experiences for ambitious brands.",
       },
-      { property: "og:title", content: "TruHub Solutions" },
+      { property: "og:title", content: "TruHub Solutions — Digital Experiences, Engineered" },
       {
         property: "og:description",
         content: "We don't just build websites. We build digital experiences.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "TruHub Solutions — Digital Experiences, Engineered" },
+      { name: "description", content: "TruHub Solutions creates modern, high-performance websites with stunning design, seamless user experiences, innovative technology, and results-driven digital so" },
+      { property: "og:description", content: "TruHub Solutions creates modern, high-performance websites with stunning design, seamless user experiences, innovative technology, and results-driven digital so" },
+      { name: "twitter:description", content: "TruHub Solutions creates modern, high-performance websites with stunning design, seamless user experiences, innovative technology, and results-driven digital so" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4ffc3064-fbb9-4bdb-a34b-6a2ac3f783ca" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4ffc3064-fbb9-4bdb-a34b-6a2ac3f783ca" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
