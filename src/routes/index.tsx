@@ -1,24 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import Intro from "@/components/Intro";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Story from "@/components/Story";
+import Portfolio from "@/components/Portfolio";
+import Footer from "@/components/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [introDone, setIntroDone] = useState(false);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-[#0A0A0A] text-white">
+      {!introDone && <Intro onDone={() => setIntroDone(true)} />}
+      {introDone && (
+        <>
+          <Navbar />
+          <main>
+            <Hero />
+            <Story />
+            <section id="services" className="py-20 px-6 text-center">
+              <p className="text-sm tracking-[0.3em]" style={{ color: "#00D4FF" }}>
+                WHAT WE DO
+              </p>
+              <h2 className="mt-4 font-display font-bold text-4xl md:text-5xl">
+                Strategy · Design · Engineering
+              </h2>
+            </section>
+            <Portfolio />
+          </main>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }
