@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import founder from "@/assets/jayanth-founder.png.asset.json";
 
 const skills = [
   "Web Development",
@@ -50,12 +49,11 @@ export default function Founder() {
               }}
             />
             <div className="relative overflow-hidden rounded-2xl border border-white/10">
-              <img
-                src={founder.url}
-                alt="Jayanth Gone, Founder & Chairman of TruHub Solutions"
-                className="w-full h-full object-cover aspect-[4/5]"
-                loading="lazy"
-              />
+             <img
+  src="/founder.jpg"
+  alt="Jayanth Gone - Founder & Chairman"
+  className="w-full h-full object-cover rounded-xl"
+/>
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
