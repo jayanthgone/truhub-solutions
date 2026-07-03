@@ -1,15 +1,9 @@
 import { motion } from "framer-motion";
-
-const projects = [
-  { title: "Nova Finance", desc: "Fintech platform with real-time analytics dashboards." },
-  { title: "Lumen Studio", desc: "Creative agency site with immersive scroll storytelling." },
-  { title: "Orbit Commerce", desc: "Headless e-commerce experience with 3D product views." },
-  { title: "Pulse Health", desc: "Wellness app landing with cinematic hero animations." },
-  { title: "Vertex SaaS", desc: "B2B SaaS marketing site with high-converting funnels." },
-  { title: "Echo Media", desc: "Editorial platform with rich media and dynamic layouts." },
-];
+import { useProjects } from "@/lib/portfolio-store";
 
 export default function Portfolio() {
+  const projects = useProjects();
+
   return (
     <section id="portfolio" className="relative py-32 px-6">
       <div className="max-w-7xl mx-auto">
@@ -33,13 +27,16 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
-            <motion.div
-              key={p.title}
+            <motion.a
+              key={p.id}
+              href={p.link || "#"}
+              target={p.link?.startsWith("http") ? "_blank" : undefined}
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="card-glow group relative rounded-2xl border border-white/10 bg-white/[0.02] p-8 h-64 flex flex-col justify-between overflow-hidden"
+              className="card-glow group relative rounded-2xl border border-white/10 bg-white/[0.02] p-8 h-64 flex flex-col justify-between overflow-hidden cursor-pointer"
             >
               <div
                 className="absolute -right-20 -top-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-40 blur-3xl transition-opacity duration-500"
@@ -47,7 +44,7 @@ export default function Portfolio() {
               />
               <div className="relative">
                 <span className="text-xs text-white/40 font-mono">
-                  0{i + 1}
+                  {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-4 font-display text-2xl font-semibold">
                   {p.title}
@@ -65,7 +62,7 @@ export default function Portfolio() {
                   →
                 </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
