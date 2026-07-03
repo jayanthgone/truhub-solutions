@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import logo from "@/assets/truhub-logo.png.asset.json";
+import TruhubLogo from "./TruhubLogo";
 
 const lines = [
   { text: "Every great business deserves a digital identity.", delay: 2.6 },
@@ -31,14 +31,14 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.04),transparent_40%)]" />
 
       <div className="relative max-w-5xl text-center">
-        <motion.img
-          src={logo.url}
-          alt="TruHub Solutions"
+        <motion.div
           initial={{ opacity: 0, y: -20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mx-auto mb-8 w-[120px] md:w-[160px] drop-shadow-[0_0_30px_rgba(0,212,255,0.35)]"
-        />
+          className="flex justify-center mb-8"
+        >
+          <TruhubLogo size={140} />
+        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
