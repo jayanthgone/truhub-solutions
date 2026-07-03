@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Story from "@/components/Story";
 import Portfolio from "@/components/Portfolio";
+import Founder from "@/components/Founder";
 import Footer from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
@@ -32,6 +33,7 @@ function Index() {
               </h2>
             </section>
             <Portfolio />
+            <Founder />
           </main>
           <Footer />
         </>

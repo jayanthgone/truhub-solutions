@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 type Props = {
   size?: number;
@@ -13,7 +13,7 @@ export default function TruhubLogo({
   animate = true,
   className = "",
 }: Props) {
-  const draw = {
+  const draw: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => ({
       pathLength: 1,
