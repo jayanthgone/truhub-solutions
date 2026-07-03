@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/truhub-logo.png.asset.json";
+import TruhubLogo from "./TruhubLogo";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -31,7 +31,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 font-display font-bold text-xl">
-          <img src={logo.url} alt="TruHub" className="h-8 w-8 object-contain" />
+          <TruhubLogo size={36} animate={false} />
           <span className="text-white/90 text-sm tracking-widest">TRUHUB</span>
         </a>
         <ul className="hidden md:flex items-center gap-8">
