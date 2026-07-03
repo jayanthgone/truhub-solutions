@@ -27,7 +27,7 @@ export default function Intro({ onDone }: { onDone: () => void }) {
             "radial-gradient(circle at 50% 50%, rgba(0,212,255,0.25) 0%, rgba(0,212,255,0) 55%)",
         }}
       />
-      <TruhubLogo size={320} showWordmark />
+      <TruhubLogo size={320} />
     </motion.div>
   );
 }
