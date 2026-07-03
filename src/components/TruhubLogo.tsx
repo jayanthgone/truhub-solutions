@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import logo from "@/assets/truhub-logo.png.asset.json";
 
 type Props = {
   size?: number;
@@ -39,16 +38,16 @@ export default function TruhubLogo({
           boxShadow: "inset 0 0 30px rgba(0,212,255,0.15)",
         }}
       />
-      <img
-        src={logo.url}
-        alt="TruHub Solutions"
-        className="relative w-full h-full object-contain rounded-2xl"
-        style={{
-          filter:
-            "drop-shadow(0 0 18px rgba(0,212,255,0.45)) contrast(1.05) saturate(1.1)",
-          mixBlendMode: "screen",
-        }}
-      />
+    <img
+  src="/truhub-logo.png"
+  alt="TruHub Solutions"
+  className="relative w-full h-full object-contain rounded-2xl"
+  style={{
+    filter:
+      "drop-shadow(0 0 18px rgba(0,212,255,0.45)) contrast(1.05) saturate(1.1)",
+    mixBlendMode: "screen",
+  }}
+/>
     </motion.div>
   );
 }
