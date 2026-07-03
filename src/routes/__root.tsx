@@ -73,45 +73,129 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TruHub Solutions — Digital Experiences, Engineered" },
-      {
-        name: "description",
-        content:
-          "TruHub Solutions is a premium digital agency crafting cinematic websites and digital experiences for ambitious brands.",
-      },
-      { property: "og:title", content: "TruHub Solutions — Digital Experiences, Engineered" },
-      {
-        property: "og:description",
-        content: "We don't just build websites. We build digital experiences.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TruHub Solutions — Digital Experiences, Engineered" },
-      { name: "description", content: "TruHub Solutions creates modern, high-performance websites with stunning design, seamless user experiences, innovative technology, and results-driven digital so" },
-      { property: "og:description", content: "TruHub Solutions creates modern, high-performance websites with stunning design, seamless user experiences, innovative technology, and results-driven digital so" },
-      { name: "twitter:description", content: "TruHub Solutions creates modern, high-performance websites with stunning design, seamless user experiences, innovative technology, and results-driven digital so" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4ffc3064-fbb9-4bdb-a34b-6a2ac3f783ca" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/4ffc3064-fbb9-4bdb-a34b-6a2ac3f783ca" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
-      },
-    ],
-  }),
+ head: () => ({
+  meta: [
+    { charSet: "utf-8" },
+
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+
+    {
+     title: "TruHub Solutions | Web Development, UI/UX & Digital Solutions"
+    },
+
+    {
+      name: "description",
+      content:
+        "TruHub Solutions is a premium web development agency creating modern websites, UI/UX design, branding, SEO and digital solutions that help businesses grow online.",
+    },
+
+    {
+      name: "keywords",
+      content:
+        "TruHub Solutions, Web Development, Website Design, Digital Agency, UI UX, Branding, SEO, React, Tailwind CSS, Business Website, Portfolio Website",
+    },
+
+    {
+      name: "author",
+      content: "Jayanth Gone",
+    },
+
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+
+    {
+      name: "theme-color",
+      content: "#00D4FF",
+    },
+
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    {
+      property: "og:title",
+      content: "TruHub Solutions | Premium Digital Experiences",
+    },
+
+    {
+      property: "og:description",
+      content:
+        "We don't just build websites. We build digital experiences.",
+    },
+
+    {
+      property: "og:url",
+      content: "https://truhub-solutions.vercel.app/",
+    },
+
+    {
+      property: "og:image",
+      content: "https://truhub-solutions.vercel.app/truhub-logo.png",
+    },
+
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+
+    {
+      name: "twitter:title",
+      content: "TruHub Solutions | Premium Digital Experiences",
+    },
+
+    {
+      name: "twitter:description",
+      content:
+        "We don't just build websites. We build digital experiences.",
+    },
+
+    {
+      name: "twitter:image",
+      content: "https://truhub-solutions.vercel.app/truhub-logo.png",
+    },
+  ],
+
+  links: [
+    {
+      rel: "stylesheet",
+      href: appCss,
+    },
+
+    {
+      rel: "icon",
+      href: "/favicon.ico",
+      type: "image/x-icon",
+    },
+
+    {
+      rel: "apple-touch-icon",
+      href: "/truhub-logo.png",
+    },
+
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous",
+    },
+
+    {
+      rel: "stylesheet",
+      href:
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+    },
+  ],
+}),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
